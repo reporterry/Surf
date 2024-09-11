@@ -7,6 +7,7 @@
         "source": "https://github.com/TYPO3/Surf",
         "docs": "https://docs.typo3.org/other/typo3/surf/main/en-us/"
     },
+	"minimum-stability". "alpha",
     "require": {
         "php": "^7.4 || ^8.0",
         "consolidation/self-update": "~3.0.0-alpha2",
