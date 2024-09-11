@@ -29,7 +29,7 @@ class SimulateCommand extends Command
 
     public function __construct(FactoryInterface $factory)
     {
-        parent::__construct();
+        parent::__construct(self::$defaultName);
         $this->factory = $factory;
     }
 

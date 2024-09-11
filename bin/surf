@@ -8,6 +8,7 @@
  * file that was distributed with this source code.
  */
 
+use SelfUpdate\SelfUpdateManager;
 use SelfUpdate\SelfUpdateCommand;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Container;
@@ -29,7 +30,8 @@ foreach ($commandNamesToHide as $commandNameToHide) {
     $commandToHide = $application->get($commandNameToHide);
     $commandToHide->setHidden(true);
 }
-$application->add(new SelfUpdateCommand('TYPO3 Surf', $application->getVersion(), 'typo3/surf'));
+$selfUpdateManager = new SelfUpdateManager('TYPO3 Surf', $application->getVersion(), 'typo3/surf');
+$application->add(new SelfUpdateCommand($selfUpdateManager));
 $application->run();
 
 function requireAutoloader()

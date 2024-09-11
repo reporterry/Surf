@@ -13,8 +13,8 @@ namespace TYPO3\Surf\Domain\Service;
 
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+use TYPO3\Surf\DependencyInjection\ContainerAwareInterface;
+use TYPO3\Surf\DependencyInjection\ContainerAwareTrait;
 use TYPO3\Surf\Domain\Model\Task;
 use UnexpectedValueException;
 use Webmozart\Assert\Assert;
